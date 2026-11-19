@@ -1,0 +1,42 @@
+# InvoiceIQ Business Rules & Financial Policy Configuration
+
+tolerances:
+  # Initial configurable prototype tolerance: 2% of PO applicable amount, capped at ₹500
+  amount_tolerance_percentage: 0.02
+  amount_tolerance_cap: 500.0
+  # Tax tolerance: 1% capped at ₹100
+  tax_tolerance_percentage: 0.01
+  tax_tolerance_cap: 100.0
+  # Line item price variance tolerance
+  line_item_price_tolerance_pct: 0.01
+
+decision_policy:
+  # Precedence hierarchy:
+  # 1. Confirmed Duplicate -> REJECT
+  # 2. Confirmed Unapproved / Inactive Vendor -> REJECT
+  # 3. Material Amount Mismatch exceeding tolerance -> PENDING REVIEW
+  # 4. Missing Critical Fields / Low OCR Confidence -> PENDING REVIEW
+  # 5. PO Discrepancy / Ambiguous PO -> PENDING REVIEW
+  # 6. All Checks Pass -> APPROVED
+  duplicate_action: "REJECTED"
+  unapproved_vendor_action: "REJECTED"
+  inactive_vendor_action: "REJECTED"
+  amount_mismatch_action: "PENDING REVIEW"
+  missing_fields_action: "PENDING REVIEW"
+  low_confidence_action: "PENDING REVIEW"
+  ambiguous_po_action: "PENDING REVIEW"
+  closed_po_action: "PENDING REVIEW"
+
+mandatory_fields:
+  - invoice_number
+  - invoice_date
+  - vendor_name
+  - invoice_total
+
+currency:
+  default_currency: "INR"
+  allow_foreign_currencies: false
+
+ocr:
+  min_text_length_threshold: 50
+  confidence_warning_threshold: 0.70

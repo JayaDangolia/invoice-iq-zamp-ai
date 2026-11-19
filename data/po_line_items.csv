@@ -1,0 +1,14 @@
+po_number,item_id,description,quantity,unit_price,line_total,tax_rate
+PO-2024-001,ITEM-101,Enterprise Cloud Server Hosting Annual Tier-1,1,100000.00,100000.00,0.18
+PO-2024-001,ITEM-102,Managed Firewall & DDoS Shield Protection,1,25000.00,25000.00,0.00
+PO-2024-002,ITEM-201,High-Performance Compute Cluster - Tier B,1,50000.00,50000.00,0.00
+PO-2024-003,ITEM-301,Cold Chain Freight & Logistics Services,2,35000.00,70000.00,0.20
+PO-2024-004,ITEM-401,Software Architecture Consulting Sprint,1,45000.00,45000.00,0.00
+PO-2024-005,ITEM-501,Biometric Access Terminals & Installation,2,25000.00,50000.00,0.24
+PO-2024-006,ITEM-601,Fullstack Engineering Support - 80 Hours,80,1000.00,80000.00,0.18
+PO-2024-006,ITEM-602,Cloud Security Audit & Review Report,1,30000.00,30000.00,0.00
+PO-2024-007,ITEM-701,Ergonomic Executive Office Chairs,10,3000.00,30000.00,0.00
+PO-2024-008,ITEM-801,Dedicated VPN Gateway Appliance,1,20000.00,20000.00,0.00
+PO-2024-009,ITEM-901,Milestone 1 — Cloud Architecture Design,1,40000.00,40000.00,0.00
+PO-2024-009,ITEM-902,Milestone 2 — Infrastructure Implementation,1,35000.00,35000.00,0.00
+PO-2024-009,ITEM-903,Milestone 3 — UAT & System Handover,1,25000.00,25000.00,0.00
